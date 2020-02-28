@@ -1,0 +1,175 @@
+
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 19px;
+    }
+
+    .footer{
+      background-color: dimgrey;
+      border-top: 3px solid black;
+      border-bottom: 3px solid black;
+      bottom: 0;
+    }
+
+    a:link {
+
+      text-decoration: none;
+    }
+    a{
+      color:black;
+    }
+    a:hover{
+      color:deepskyblue;
+    }
+    a.nav-link:hover {
+
+box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 8px 10px 0 rgba(0, 0, 0, 0.22);
+    }
+
+    /**style for the page sections appearing as sheets**/
+    #main,#below,#below1,#below2,#below3 {
+
+      border-width:2px;
+      border-style:outset;
+      border-color:grey;
+      box-shadow: 1px 10px 5px rgba(0, 0, 0, .5);
+      background-color:white;
+      margin-bottom:30px;
+      padding-left:30px;
+
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background-image: linear-gradient(black,grey,lightgray);
+      border-bottom: 4px solid silver;
+      margin-bottom: 20px;
+
+    }
+
+    /*style for the sidebar appearing in homepage*/
+    #side{
+       border-width:2px;
+      border-style:outset;
+      border-color:grey;
+      width:200px;
+      display:block;
+      right: 0;
+      background-color:white;
+      margin-bottom:30px;
+      padding:5px;
+      font-family:'Kalam', cursive;
+      justify-content: center;
+      text-align: center;
+
+    }
+    .nav-item{
+      margin-left:10px;
+      margin-right:10px;
+    }
+
+  .navbar-nav {
+    float:none;
+    margin:0 auto;
+
+
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+
+    /*disappearing the sidebar when necessary*/
+    @media screen and (max-width: 1400px) {
+      #side{display:none;}
+    }
+    @media screen and (max-width:500px) {
+      .side-img{display:none;}
+    }
+    #aboveAll{
+      background: black;
+      justify-content: center;
+    }
+    a.nav-link{
+      text-shadow: 2px 2px 4px #000000;
+      font-family:'Kalam', cursive;
+      font-size:22px;
+    }
+    .side-img{
+        width: 25%;
+        height: 100px;
+     }
+    a.active{
+     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 8px 10px 0 rgba(0, 0, 0, 0.22);
+    }
+
+    /*style for the title of each page section*/
+    .title{
+      font-family:'Kalam', cursive;
+      margin-top:20px;
+      margin-bottom:10px;
+      margin-left:-10px;
+      padding:5px;
+      padding-top:10px;
+      background-image: linear-gradient(to right, lightgray , lightgray, white);
+      border-left: 10px solid dimgrey;
+      background-color: lightgray;
+    }
+    .showcase-img{
+       border: 1px solid black;
+
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+   .news{
+      border-left: silver solid 8px;
+   }
+    .date{
+      font-size:15px;
+      color:gray;
+      margin-bottom: -5px;
+    }
+
+ /*style for textarea and select field*/
+ select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid silver;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+/*style for the popup login form*/
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.login:hover{
+    color:deepskyblue;
+}
+
+/*style for the table appearing in 'Messages' page*/
+table, th, td {
+  border: 1px lightsteelblue inset;
+}
+tr:nth-child(even) {
+    background-color: lightblue;
+}
+th {
+  background-color: deepskyblue;
+  color: white;
+}

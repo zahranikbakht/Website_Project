@@ -1,0 +1,57 @@
+{% extends "simple.html" %}
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+{% block title %}{{ super() }} - Contact{% endblock %}
+
+
+{% block contact %}
+    <a class="nav-link active" href="/contact"><b>Contact Eliza</b> </a>
+{% endblock %}
+
+
+{% block first %}
+
+    <div id="main" class="col-xl-11">
+        <section class="title"><h1>Contact</h1></section>
+
+        <p>Eliza Games is located at: 1650 Avenue Lincoln, Montreal Canada</p>
+        <p>If you want to collaborate with us, please contact us at <a href="mailto:collab@elizagames.com"><i>collab@elizagames.com</i></a>.
+        </p>
+        <p>For general non-game inquiries, contact <a href="mailto:info@elizagames.com"><i>info@elizagames.com</i></a>.
+        </p>
+        <p>If you have any comments, feedback or questions about any of Eliza games, please use the form below:</p>
+        <br>
+        {% if form.errors %}
+            <ul class="errors">
+                {% for field_name, field_errors in form.errors|dictsort if field_errors %}
+                    {% for error in field_errors %}
+                        <li style="color:red;">{{ form[field_name].label }}: {{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+
+        {% endif %}
+      <div style="color: dodgerblue">{% for message in get_flashed_messages() %}
+    {{ message }}<br/>
+          <br>
+        {% endfor %}</div>
+
+        <form action="/contact" method="post">
+            {{ form.csrf_token }}
+            <label for="name">Your Name</label>
+            {{ form.name }}
+            <label for="email">Your Email Address</label>
+            {{ form.email }}
+            <label for="game">Which game do you want to talk about?</label>
+            {{ form.game }}
+            <label for="subject">Your comment or inquiry</label>
+            {{ form.message }}
+            <button type="submit" style="margin-bottom: 10px" class="btn-info">Submit</button>
+            <br>
+
+        </form>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>{% block head %}
+    <title>Eliza Games-Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/static/javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="/static/styleeliza.css" rel="stylesheet" type="text/css">
+
+    <title>{% block title %}Eliza Games{% endblock %}</title>
+
+
+{% endblock %}</head>
+
+<body style="background-image: url({{ url_for('static', filename='bg.png') }})">
+{% block contents %}
+
+    <div id="aboveAll">
+        <div class="row">
+            <img src="{{ url_for('static', filename='leaves.png') }}" class="rounded float-left side-img">
+            <img src="{{ url_for('static', filename='Intro.png') }}" class="rounded mx-auto d-block">
+            <img src="{{ url_for('static', filename='leavess.png') }}" class="rounded float-right side-img">
+        </div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="overflow: hidden">
+        {% block navbar %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+            <li class="nav-item">
+                {% block home %}
+                    <a class="nav-link" style="color:white; font-size:22px;" href="/">Home</a>
+                {% endblock %}
+            </li>
+            <li class="nav-item">
+                {% block released %}
+                    <a class="nav-link" style="color:white; font-size:22px;" href="/released">Released Games</a>
+                {% endblock %}
+            </li>
+
+            <li class="nav-item">
+                {% block wip %}
+                    <a class="nav-link" style="color:white;" href="/wip"> WIP</a>
+                {% endblock %}
+            </li>
+            <li class="nav-item">
+                {% block about %}
+                    <a class="nav-link" style="color:white;" href="/about"> About Eliza</a>
+                {% endblock %}
+            </li>
+            <li class="nav-item">
+                {% block contact %}
+                    <a class="nav-link" style="color:white" href="/contact"> Contact Eliza</a>
+                {% endblock %}
+            </li>
+            {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                    {% block messages %}
+                        <a class="nav-link" style="color:white" href="/messages">Messages</a>
+                    {% endblock %}
+                </li>
+            {% endif %}
+        {% endblock %}
+        </ul>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block main %}
+            <div class="row">
+                {% block first %}
+                    <div id="main" class="col-xl-11">
+                        {% block message %}
+                            {% endblock %}
+                        <section class="title"><h1>Welcome!</h1></section>
+
+                        <p>We are glad that you are here! This is the official website of Eliza Games, a video game
+                            company located in Montreal, Canada. We hope to provide fun games for everybody to play.</p>
+                        <br>
+                        <p>All games on this website are free to download and play. If you like our games, make sure to
+                            check the website often to get the latest news about them. Feel free to use this website as
+                            a platform to get in touch with us and share your thoughts, ideas and inquiries about our
+                            games.</p>
+                        <br>
+                        <p>Our purpose is to provide you with free games that you can enjoy. We hope you can find the
+                            game you are looking for in the wide variety of games available here. But if you can't, no
+                            worries! You can always tell us what to make next.</p>
+                        <br>
+                        <p></p>
+                    </div>
+                {% endblock %}
+
+            </div>
+
+        {% endblock %}
+    </div>
+{% endblock %}</body>
+<footer class="footer">
+
+    <br>
+    {% block foot %}
+    {% endblock %}
+    <p>Website Created by: Zahra Nikbakht</p>
+</footer>
+</html>

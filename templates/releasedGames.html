@@ -1,0 +1,189 @@
+{% extends "simple.html" %}
+{% block title %}{{ super() }} - Released Games{% endblock %}
+
+
+{% block released %}
+    <a class="nav-link active" href="/released"><b>Released Games</b> </a>
+{% endblock %}
+{% block first %}
+    <div id="main" class="col-xl-11">
+        <img src="static/bblogo.png" class="img-fluid" alt="Black Butterflies logo">
+        <button type="button" class="btn btn-info"><a style="color:white"
+                                                      href="https://www.dropbox.com/s/iplp1dyzvrufv2w/Black%20Butterflies.exe?dl=0"
+                                                      target="_blank">Download</a></button>
+        {% if bb == 0 %}
+            <p>No rating available</p>
+        {% else %}
+            <p>{{ bb }} out of 5</p>
+        {% endif %}
+        <a href="/review/Black Butterflies">Write a Review</a>
+        <section class="title"><h2>Storyline</h2></section>
+        <p>It always starts with a question. The question is, How far would you go? How far would you go to take
+            revenge? How far would you go to prove yourself? How far would you go to break the limits? How far would you
+            go to bring "Justice"???</p>
+        <p>The story that has been told to him is simple, Roman is a young peasant who has his own questions to answer,
+            Join him as he goes on a mysterious journey. He's been chosen by Myra (The angel of war) to search all over
+            the world to find five famous heroes and stop a big army of black butterflies that is attacking the Earth
+            for no good reason...But...What's the whole point of this?! Black butterflies destroying the world? That's
+            absolutely absurd...Unless it's all planned by someone to make a big show. Someone who would go THIS far to
+            bring her own "Justice"...She's screaming, Are you listening carefully enough?! </p>
+        <section class="title"><h2>Features</h2></section>
+        <p>This game is a 2D RPG and it is kind of a fangame, Including 10 characters from 5 RPGs. Note that the game
+            also has its own characters and story.</p>
+        <ul>
+            <li>Animated turn-based battle system</li>
+            <li>Switch between party members during the battle, so you are not stuck with 3-4 characters.</li>
+            <li>3 endings</li>
+            <li>20 side quests</li>
+            <li>A huge world, including 8 islands. So a lot of exploration!</li>
+            <li>40 hours of gameplay</li>
+        </ul>
+        <br>
+        <section class="title"><h2>Screenshots</h2></section>
+        <img src="static/castle.png" class="img-fluid" alt="castle image" style="margin-bottom: 5px; ">
+        <img src="static/cave.png" class="img-fluid" alt="cave image" style="margin-bottom: 5px; ">
+        <img src="static/mt.png" class="img-fluid" alt="mountain image" style="margin-bottom: 5px; ">
+        <img src="static/forest.png" class="img-fluid" alt="forest image" style="margin-bottom: 5px; ">
+        <img src="static/town.png" class="img-fluid" alt="town image" style="margin-bottom: 5px; ">
+        <img src="static/inside.png" class="img-fluid" alt="inside image" style="margin-bottom: 5px; ">
+        <img src="static/townn.png" class="img-fluid" alt="snow town image" style="margin-bottom: 20px; ">
+        <section class="title"><h2>System Requirements</h2></section>
+        <p>Download size: 375MB</p>
+        <p>Operating System: Windows XP+</p>
+        <p>RAM: 256MB</p>
+
+        <section class="title"><h2>Download Link</h2></section>
+        <p>You can download the game from <a style="color:deepskyblue"
+                                             href="https://www.dropbox.com/s/iplp1dyzvrufv2w/Black%20Butterflies.exe?dl=0"
+                                             target="_blank">here</a>. Enjoy!</p>
+    </div>
+{% endblock %}
+{% block main %}{{ super() }}
+    <div class="row">
+        <div id="below" class="col-xl-11">
+            <img src="static/ww.png" class="img-fluid" alt="Wonder's War logo">
+            <button type="button" class="btn btn-info"><a style="color:white"
+                                                          href="https://drive.google.com/open?id=0BymcidgrnvM9cXRyMzRaNURVWFE"
+                                                          target="_blank">Download</a></button>
+            {% if ww == 0 %}
+                <p>No rating available</p>
+            {% else %}
+                <p>{{ ww }} out of 5</p>
+            {% endif %}
+            <a href="/review/Wonder's War">Write a Review</a>
+            <section class="title"><h2>Storyline</h2></section>
+            <p>You awake, finding yourself in a deserted cave. Gazing at your surroundings, you can’t remember anything.
+                You don’t know where you are, where you’ve been, or where you came from, your identity being a mystery
+                to you. Only having the knowledge of movement, and a basic vocabulary, everything else is new to you.
+                You don’t know how to feel, you don’t know how to behave, it is like you are a child. </p>
+            <p>Then out of nowhere, you are attacked by a seemingly countless mass of people! All of which, want you
+                dead, and so in retaliation… They seemingly disappear out of nowhere? From what you can gather, it was
+                something you did to them.</p>
+            <p>What happened there? Why did they disappear? Why are there now many people approaching you? What kind of
+                world is this? One where you can cast weird elements out of your fingertips, where you hear loud
+                clanking sounds, where aggressive tiny creatures try to kill you, and all the other bizarre things you
+                have found in this cave… But as you’ll come to find out, this is a world of war, greed, and chaos, with
+                a few people who aspire higher to gain what others only dream of… even if their aspirations will leave
+                destruction on the wakening of their glory.</p>
+            <section class="title"><h2>Features</h2></section>
+
+            <ul>
+                <li>Huge battle system which you may customize to your liking with character variety.</li>
+                <li>Large interactive environments.</li>
+                <li>A long volley of side quests.</li>
+                <li>Creative Visuals</li>
+                <li>A never before seen world!</li>
+                <li>Long game</li>
+            </ul>
+            <br>
+            <section class="title"><h2>Screenshots</h2></section>
+            <img src="static/d2.png" class="img-fluid" alt="dungeon image" style="margin-bottom: 5px; ">
+            <img src="static/Warm_Heart.png" class="img-fluid" alt="house image" style="margin-bottom: 5px; ">
+            <img src="static/Tip_Toe_Tale.png" class="img-fluid" alt="house image" style="margin-bottom: 5px; ">
+            <img src="static/Delivering_the_Goods.png" class="img-fluid" alt="town image" style="margin-bottom: 5px; ">
+            <img src="static/Bourg_of_Rest.png" class="img-fluid" alt="house image" style="margin-bottom: 20px; ">
+
+            <section class="title"><h2>System Requirements</h2></section>
+            <p>Download size: 285MB</p>
+            <p>Operating System: Windows XP+</p>
+            <p>RAM: 256MB</p>
+
+            <section class="title"><h2>Download Link</h2></section>
+            <p>You can download the game from <a style="color:deepskyblue"
+                                                 href="https://drive.google.com/open?id=0BymcidgrnvM9cXRyMzRaNURVWFE"
+                                                 target="_blank">here</a>. Enjoy!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div id="below1" class="col-xl-11">
+            <img src="static/tq.png" class="img-fluid" alt="Traitor's Quest logo">
+            <button type="button" class="btn btn-info"><a style="color:white"
+                                                          href="https://drive.google.com/open?id=1ggvBpHmFy-D5jc0HH7duFWF9LDbA6Se9"
+                                                          target="_blank">Download</a></button>
+            {% if tq == 0 %}
+                <p>No rating available</p>
+            {% else %}
+                <p>{{ tq }} out of 5</p>
+            {% endif %}
+            <a href="/review/Traitor's Quest">Write a Review</a>
+            <section class="title"><h2>Storyline</h2></section>
+            <p>Traitor’s Quest is a game about 4 people of the Cross Kingdom turning on their king, who has caused ruin
+                to their life in one way or another. You can choose to play as the Knight, the Archer, the Thief, or the
+                Wizard, and tear through all those that oppose you from finding freedom through regicide. The game plays
+                like an old SNES game, a bit short, but modernized. The game changes to the character you play as,
+                offering multiple endings depending on which character is the one that felled the final boss, which can
+                give some replayability to the game. It is meant to be a fun experience with a decent story, just like
+                the old days.</p>
+            <section class="title"><h2>Features</h2></section>
+            <ul>
+                <li>Pixel Art</li>
+                <li>Catchy music</li>
+                <li>Nostalgic atmosphere</li>
+                <li>Character Selection</li>
+            </ul>
+            <section class="title"><h2>Screenshots</h2></section>
+            <img src="static/In_Game.png" class="img-fluid" alt="forest image" style="margin-bottom: 5px; ">
+            <img src="static/Archer_Animation.gif" class="img-fluid" alt="archer image" style="margin-bottom: 5px; ">
+            <img src="static/Thief.gif" class="img-fluid" alt="thief image" style="margin-bottom: 20px; ">
+            <section class="title"><h2>System Requirements</h2></section>
+            <p>Download size: 50MB</p>
+            <p>Operating System: Windows XP+</p>
+            <p>RAM: 256MB</p>
+            <section class="title"><h2>Download Link</h2></section>
+            <p>You can download the game from <a style="color:deepskyblue"
+                                                 href="https://drive.google.com/open?id=1ggvBpHmFy-D5jc0HH7duFWF9LDbA6Se9"
+                                                 target="_blank">here</a>. Enjoy!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div id="below2" class="col-xl-11">
+            <img src="static/Kittypop.png" class="img-fluid" alt="Kitty Pop logo">
+            <button type="button" class="btn btn-info"><a style="color:white"
+                                                          href="https://drive.google.com/open?id=1WA35tt9kWgz68Zt5QPzwZE5DRw4F7meB"
+                                                          target="_blank">Download</a></button>
+            {% if kp == 0 %}
+                <p>No rating available</p>
+            {% else %}
+                <p>{{ kp }} out of 5</p>
+            {% endif %}
+            <a href="/review/Kitty Pop">Write a Review</a>
+            <section class="title"><h2>Description</h2></section>
+            <p>Kitty Pop is a cute tile-matching video game like Bejeweled and Candy Crush. It features cute cat
+                graphics and relaxing music. You only have ten moves to reach a score of 700 or more to win the
+                game.</p>
+
+            <section class="title"><h2>Screenshots</h2></section>
+            <img src="static/kpgame.png" class="img-fluid" alt="game image" style="margin-bottom: 5px; ">
+            <img src="static/kplose.png" class="img-fluid" alt="game image" style="margin-bottom: 20px; ">
+            <section class="title"><h2>System Requirements</h2></section>
+            <p>Download size: 2MB</p>
+            <p>Operating System: Windows XP+</p>
+            <p>RAM: 256MB</p>
+            <p>Note: You need to have python installed to run the .py file.</p>
+            <section class="title"><h2>Download Link</h2></section>
+            <p>You can download the game from <a style="color:deepskyblue"
+                                                 href="https://drive.google.com/open?id=1WA35tt9kWgz68Zt5QPzwZE5DRw4F7meB"
+                                                 target="_blank">here</a>. Enjoy!</p>
+        </div>
+    </div>
+{% endblock %}

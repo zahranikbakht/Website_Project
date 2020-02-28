@@ -1,0 +1,83 @@
+{% extends "simple.html" %}
+
+{% block title %}{{ super() }} - Home{% endblock %}
+
+
+{% block home %}
+    <a class="nav-link active" href="/"><b>Home</b> </a>
+{% endblock %}
+{% block first %}{{ super() }}
+    <div class=" col-md-1">
+        <div id="side">
+            <h4 style="text-align: center; border-bottom: black 3px groove"><b>Top 3 Games</b></h4>
+            {% for item in top_list %}
+                <a href="/released#{{ item[3] }}" target="_blank"><img class="rounded mx-auto d-block showcase-img"
+                                                                       src="{{ item[2] }}" width=190px>{{ item[1] }}</a>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block message %}
+    <div style="color: red">{% for message in get_flashed_messages() %}
+    {{ message }}<br/>
+{% endfor %}</div>
+    {% endblock %}
+{% block main %}{{ super() }}
+    <div class="row">
+        <div id="below" class="col-xl-11">
+
+            <section class="title"><h1>News</h1></section>
+
+            <br>
+
+            <p class="date">10/28/2019</p>
+            <p class="news">Wonder's War reached 10000 downloads! Thank you all for your support!</p>
+
+            <p class="date">10/23/2019</p>
+            <p class="news">Check out Salad Story! a new game added to WIP section, and this time, we are going 3D!!</p>
+            <p class="date">10/22/2019</p>
+            <p class="news">Halloween patch is released for Black Butterflies. Now you can have your characters wear
+                customs, buy halloween candies at most urban shops, and much more.</p>
+            <p class="date">10/20/2019</p>
+            <p class="news">Wonder's War is getting a day/night system because of your requests. Be aware that enemies
+                get tough at nights and you can't go inside any houses.</p>
+            <p class="date">10/15/2019</p>
+            <p class="news">Patch 1.3.1 is released for Black Butterflies. Several bugs were fixed. Please note that Mac
+                version of the game is no longer supported.</p>
+            <p class="date">10/13/2019</p>
+            <p class="news">The mobile version of Kitty Pop is under development! You can expect to play it on your
+                phones soon.</p>
+            <p class="date">10/01/2019</p>
+            <p class="news">Thanks to our composer, new soundtracks are out for Unreality.</p>
+            <div id="dataDiv"></div>
+        </div>
+    </div>
+    <div class="form-popup" id="login_form">
+        <form action="/" class="form-container" method="post">
+            <h1>Admin Login</h1>
+            {{ form.csrf_token }}
+
+            <label><b>Username</b></label>
+            {{ form.username }}
+
+            <label><b>Password</b></label>
+            {{ form.password }}
+            <br>
+            <br>
+            <button type="submit" class="btn-info">Login</button>
+            <button class="btn-info" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    </div>
+{% endblock %}
+{% block foot %}
+    {% if current_user.is_authenticated %}
+        <a href="/logout" style="text-decoration:underline">Logout</a>
+    {% else %}
+        <label style="text-decoration:underline" class="login" onclick="openForm()">Admin Login</label>
+    {% endif %}
+
+{% endblock %}
+

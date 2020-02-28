@@ -1,0 +1,31 @@
+{% extends "simple.html" %}
+{% block title %}{{ super() }} - About{% endblock %}
+
+
+{% block about %}
+        <a class="nav-link active" href="/about"><b>About Eliza</b> </a>
+          {% endblock %}
+
+{% block first %}
+      <div id="main" class="col-xl-11">
+        <section class="title"><h1>About Eliza</h1></section>
+
+        <p>Eliza Games is a small company determined to do their best and present games made with the hard work of its talented artists and innovative programmers. We work towards making our dreams realities, and for them to be enjoyed by our players in experiences they will never forget.
+Our games are story driven with deeply written characters, having unique game mechanics never before seen in other games to give a fresh look on many old genres. and given unique soundtracks unlike any other game out there. We make games for all sorts of ages and styles, always bringing on a new game with every title for our players to learn and be interested in. We are a company that is always striving to better ourselves, and to give a great entertaining experience to all.
+
+</p>
+      </div>
+
+{% endblock %}
+
+{% block main %}{{ super() }}
+    <div id="below" class="col-xl-11">
+      <section class="title"><h1>About Contributors</h1></section>
+      <p>There are people who supported us when we were first starting the company. We would like to mention their names as a form of appreciation for their help and support.</p>
+      <p>Giovani Luengo. Find his beautiful artworks <a style="color:dodgerblue" href="https://www.deviantart.com/francislugfran">here</a>. </p>
+      <p>Indinera Falls, owner of <a style="color:dodgerblue" href="https://aldorlea.org/">Aldorlea Games</a>.</p>
+      <p>Unodu, make sure to check her <a style="color:dodgerblue" href="https://www.deviantart.com/unodu">gallery</a>.</p>
+    </div>
+  {% endblock %}
+
+

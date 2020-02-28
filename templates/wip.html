@@ -1,0 +1,47 @@
+{% extends "simple.html" %}
+{% block title %}{{ super() }} - WIP{% endblock %}
+
+
+{% block wip %}
+        <a class="nav-link active" href="/wip"><b>WIP</b> </a>
+          {% endblock %}
+
+     {% block first %}
+      <div id="main" class="col-xl-11">
+        <section class="title"><h1>Salad Story</h1></section>
+
+        <p>Salad Story is a 3D platformer game about a rabbit named Marlow. Marlow had a big farm where he planted golden carrots and he was famous for it. But one day, Cottontail, a very powerful and rich rabbit, sends his crows to destroy Marlow's farm and steal his golden carrots. When Marlow finds out, he goes on a journey to find Cottontail's castle and get back all ten golden carrots that he has stolen. There will be 6 stages and each will contain 3 levels and the fourth level is the boss fight. The following is the stage names and its associated boss fight.
+        <ul>
+        <li>Forest Area -> Aggressively Annoyed Swine</li>
+        <li>Shore Area -> Very Crabby Crab</li>
+        <li>Desert -> Dirty Desert Wolf</li>
+        <li>Mountain -> Really Ravaging Hawk</li>
+        <li>Swamp -> Rockin' n' Rollin' Gator</li>
+        <li>Castle -> Cottontail</li>
+      </ul>
+      <p>The game will be made in Unity 3D. Since this is our first attempt to make a 3D game, no estimated release date can be given. The following is an image of the game's title screen:</p>
+        <img src="static/titlescreen.png" class="img-fluid" alt="title screen" style="margin-bottom: 5px; ">
+    </div>
+
+     {% endblock %}
+{% block main %}{{ super() }}
+  <div class="row">
+    <div id="below" class="col-xl-11">
+      <section class="title"><h1>Dream of Desert</h1></section>
+      <p>Dream of Desert follows an American man who is trapped into his dream. This dream takes him back in time to one thousand years ago, in an Arabic town surrounded by deserts. The game shows his life as he tries to adapt to the new environment and live like an Arab man back then. It mostly focuses on conversations and the dramatic (sometimes funny) situations that happen while he is trying to survive in his dream.
+      </p>
+      <p>The estimated release date for this game is January 2020.</p>
+      <img src="static/dd1.png" class="img-fluid" alt="game image" style="margin-bottom: 5px; ">
+      <img src="static/dd2.png" class="img-fluid" alt="game image" style="margin-bottom: 5px; ">
+    </div>
+  </div>
+
+       <div class="row">
+    <div id="below2" class="col-xl-11">
+      <section class="title"><h1>Unreality</h1></section>
+      <p>Unreality is a video game about a little girl named Huma who is lost between the land of nightmares and the land of dreams. She must gather 20 stars to be able to open the door to Reality. Huma wakes up in a room with 3 doors. She will explore the land of nightmare and the land of dreams and meets many NPCs such as a ghost, fairy, spider, etc. Every land has 4 layers from shallow to deep. As she goes deeper in every land, it becomes more psychological and serious. Huma searches the lands and gathers stars. She will eventually open the door to the reality and returns to her bedroom.</p>
+      <p>The estimated release date for this game is June 2020.</p>
+      <img src="static/ur.png" class="img-fluid" alt="game image" style="margin-bottom: 5px; ">
+    </div>
+  </div>
+    {% endblock %}

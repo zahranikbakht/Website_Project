@@ -1,0 +1,40 @@
+{% extends "simple.html" %}
+{% block title %}{{ super() }} - Review {{ game }} {% endblock %}
+
+{% block first %}
+
+    <div id="main" class="col-xl-11">
+        <section class="title"><h1>Review</h1></section>
+
+        <p>This is a review survey for {{ game }}! You help us improve this game by filling it. Thank you very much!
+            <br>
+
+        <form action="/review/{{ game }}" method="post">
+            {{ form.csrf_token }}
+            <h1>{{ game }}</h1>
+            <br>
+            {% if form.errors %}
+                <ul class="errors">
+                    <li style="color:red;">Please answer all of the questions!</li>
+                </ul>
+
+            {% endif %}
+            {{ form.one.label }}
+            {{ form.one (style="list-style:none") }}
+            {{ form.two.label }}
+            {{ form.two (style="list-style:none") }}
+            {{ form.three.label }}
+            {{ form.three (style="list-style:none") }}
+            {{ form.four.label }}
+            {{ form.four (style="list-style:none") }}
+            {{ form.five.label }}
+            {{ form.five (style="list-style:none") }}
+            {{ form.six.label }}
+            {{ form.six (style="list-style:none") }}
+            <button type="submit" style="margin-bottom: 10px" class="btn-info">Submit</button>
+            <br>
+
+        </form>
+    </div>
+{% endblock %}
+
