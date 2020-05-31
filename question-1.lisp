@@ -1,18 +1,24 @@
-(defun take-n (lst n)
-  (cond 
-    ((< n 1) nil)
-    ((> n (list-length lst)) (copy-list lst))
-    ( t (let 
-        ((i (- (list-length lst) n)))
-        (getListAfter lst i)))))
+(defun triangle (num) 
+(cond 
+((or (not (integerp num)) (zerop num)) (print "input invalid; please enter a positive or a negative integer"))
+((< num 0)
+(dotimes (n (abs num)) 
+(dotimes (p n)
+(princ #\space))
+(dotimes (k (- (abs num) n)) 
+(write '*)
+)
+(fresh-line)
+)
+)
+(t
+(dotimes (n num) 
+(dotimes (k (- num n)) 
+(write '*) 
+)
+(fresh-line)
+)
+)
+)
+ )
 
-(defun getListAfter (lst i)
-    (cond 
-        ((null lst) '())
-        ((= i 0) (cons (car lst) (getListAfter (cdr lst) i)))
-        (t (getListAfter (cdr lst) (- i 1)))))
-
-;;; Testing
-(format t "Calling (take-n '(1 2 3) 2) will return: ~a ~%" (take-n '(1 2 3) 2))
-(format t "Calling (take-n '(1 2 3) -1) will return: ~a ~%" (take-n '(1 2 3) -1))
-(format t "Calling (take-n '(1 2 3) 6) will return: ~a ~%" (take-n '(1 2 3) 6))
